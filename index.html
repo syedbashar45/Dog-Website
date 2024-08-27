@@ -1,0 +1,907 @@
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorlib</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        /* border: 1px solid red; */
+    }
+    
+    header {
+        background-color: #1C1818;
+        color: white;
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 130%;
+    
+    }
+    
+    #header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 35%;
+        height: 9vh;
+        padding-left: 0px;
+        /* border: 1px solid white; */
+    
+    }
+    
+    #header>p {
+        font-size: 90%;
+    }
+    
+    .header {
+        display: flex;
+        gap: 2vw;
+    }
+    
+    li {
+        color: black;
+    }
+    
+    .ii:hover {
+        color: rgb(255, 177, 32) !important;
+    
+    
+    }
+    
+    nav {
+        height: 15vh;
+        /* border:1px solid #102955; */
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    #nav {
+        width: 95%;
+        display: flex;
+        /* border: 1px solid red; */
+        justify-content: space-between;
+        align-items: center;
+    
+    }
+    
+    #nav>img {
+        height: 6vh;
+        /* width: 10vw; */
+    }
+    
+    li {
+        display: inline-block;
+        margin-left: 2vw;
+    }
+    
+    li:hover {
+        color: rgb(250, 172, 28);
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    
+    section {
+        height: 100vh;
+        width: 100%;
+
+    }
+    
+    #banner {
+        height: 120vh;
+        width: 100%;
+    
+    }
+    
+    .img {
+        height: 89vh;
+        width: 100%;
+        position: absolute;
+    }
+    
+    #img {
+        z-index: 2;
+        position: relative;
+        height: 100vh;
+        margin-left: 38%;
+    }
+    
+    .we {
+        font-size: 10vh;
+        /* font-weight: 100; */
+    }
+    
+    .text {
+        position: absolute;
+        height: 60vh;
+        top: 10px;
+        z-index: 2;
+        color: white;
+        top: 38vh;
+        left: 10vw;
+        width: 30%;
+    
+    }
+    
+    .your {
+        font-size: 11vh;
+        font-weight: 800;
+    
+    }
+    
+    .lorem {
+        line-height: 6vh;
+    }
+    
+    .text>button {
+        border: none;
+        height: 9vh;
+        width: 35%;
+        color: #fd2402;
+        font-size: medium;
+        border-radius: 10rem;
+        margin-top: 10vh;
+        font-weight: 600;
+    }
+    
+    .text>button:hover {
+        background-color: #fd2402;
+        color: white;
+        font-weight: 700;
+    }
+    
+    main {
+        color: #191D34;
+        height: 25vh;
+        width: 100%;
+        text-align: center;
+        margin-top: 10vh;
+    }
+    
+    main>p {
+        line-height: 5vh;
+        color:black;
+    }
+    
+    h1 {
+        font-size: 8vh;
+        font-weight: 900;
+        margin-bottom: 10px;
+    }
+    
+    article {
+        height: 80vh;
+        width: 100;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        margin-top: 10vh;
+    }
+    
+    .div {
+        height: 65vh;
+        width: 25%;
+        border: 1px solid #FFC5C2;
+        border-radius: 10px;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+    .div:hover {
+        border: none;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    
+    .div1 {
+        background-image: url(img/service_icon_bg_1.png);
+        background-repeat: no-repeat;
+        background-position: top;
+        height: 55vh;
+        width: 50%;
+        /* border: 1px solid black; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        color: #909099;
+        line-height: 20px;
+    }
+    
+    .div1>img {
+        height: 14vh;
+    }
+    
+    #teama {
+        height: 150vh;
+        width: 100%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+    .scroll {
+        height: 80vh;
+        width: 40%;
+        /* border: 1px solid black; */
+    
+    }
+    
+    .work>img {
+        height: 120vh;
+    }
+    
+    .work1 {
+        height: 80vh;
+        width: 40%;
+        /* border: 1px solid black; */
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .work2 {
+        font-size: 9vh;
+        color: #191D34;
+    }
+    
+    .work3 {
+        font-size: 10vh;
+        color: #191D34;
+        font-weight: 800;
+    
+    }
+    
+    .work5 {
+        line-height: 30px;
+    }
+    
+    .work6>button {
+        height: 9vh;
+        width: 11vw;
+        border-radius: 20px;
+        border: none;
+        font-size: medium;
+        background-color: #fb6039;
+        color: white;
+    }
+    
+    .work6>button:hover {
+        background-color: rgb(215, 186, 186);
+        color: #ee4d35;
+        font-weight: 700;
+    
+    }
+    
+    #cards {
+        height: 100vh;
+        width: 100%;
+        /* border: 1px solid brown; */
+        display: flex;
+    }
+    
+    .cards1 {
+        height: 100vh;
+        width: 50%;
+        /* border: 1px solid blue; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    
+    }
+    
+    .cards2 {
+        height: 100vh;
+        width: 25%;
+        /* border: 1px solid blue; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .cards3 {
+        height: 100vh;
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    
+        /* border: 1px solid blue; */
+    }
+    
+    .cards {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        height: 40vh;
+        width: 58%;
+        color: #191D34;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 10px;
+    }
+    
+    .para {
+        font-size: 8vh;
+        color: black;
+    
+    }
+    
+    .para1 {
+        font-size: 8vh;
+        color: black;
+        font-weight: 800;
+    
+    }
+    
+    .para2 {
+        line-height: 30px;
+        color: black;
+    }
+    
+    .pa {
+        border: none;
+        height: 10vh;
+        width: 15vw;
+        border-radius: 50px;
+        background-color: #EF4D26;
+        color: white;
+        font-size: large;
+        font-weight: 450;
+    }
+    
+    .pa:hover {
+    
+        background-color: rgb(215, 186, 186);
+        transition: color 0.9s ease-in-out;
+        color: #fd2402;
+        font-weight: 700;
+    }
+    
+    .john {
+        height: 100vh;
+        width: 100%;
+        /* border: 1px solid firebrick; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    
+    
+    }
+    
+    .johnny {
+        height: 40vh;
+        width: 80%;
+        box-shadow: rgba(100, 100, 111, 0.337) 0px 7px 29px 0px;
+        display: flex;
+        align-items: center;
+    
+    }
+    
+    .john1 {
+        height: 40vh;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid black; */
+    }
+    
+    .john2 {
+        height: 40vh;
+        width: 70%;
+
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: center;
+    
+    }
+    
+    .john3 {
+        font-size: 4vh;
+    }
+    
+    .john4 {
+        font-size: 3vh;
+        color: #C4C4C4;
+    }
+    
+    .john5 {
+        line-height: 30px;
+        color: #898990;
+    }
+    
+    .our {
+        height: 20vh;
+        width: 100%;
+        /* border: 1px solid red; */
+        text-align: center;
+    }
+    
+    .our>h1 {
+        color: #191D34;
+    }
+    
+    .our>p {
+        color: #9090AE;
+    }
+    
+    .team {
+        height: 80vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        /* border: 1px solid blue; */
+    }
+    
+    .team1 {
+        height: 10vh;
+        width: 10vw;
+        border-radius: 10px;
+        /* border: 1px solid red; */
+        text-align: center;
+        padding-top: 15px;
+        /* padding-left: 12px;    */
+        box-shadow: rgba(100, 100, 111, 0.481) 0px 7px 29px 0px;
+        position: absolute;
+        background-color: white;
+        top: 4140px;
+        left: 130px;
+        z-index: 6;
+    
+    
+    }
+    
+    .teams>img {
+        position: relative;
+    }
+    
+    .team2 {
+        font-size: large;
+        /* font-weight: bold; */
+    }
+    
+    .team3 {
+        color: #7A7B91;
+    }
+    
+    .team10 {
+        height: 10vh;
+        width: 10vw;
+        border-radius: 10px;
+        /* border: 1px solid red; */
+        text-align: center;
+        padding-top: 15px;
+        /* padding-left: 12px;    */
+        box-shadow: rgba(100, 100, 111, 0.481) 0px 7px 29px 0px;
+        position: absolute;
+        background-color: white;
+        top: 4140px;
+        left: 600px;
+        z-index: 6;
+    
+    
+    }
+    
+    .team11 {
+        height: 10vh;
+        width: 10vw;
+        border-radius: 10px;
+        /* border: 1px solid red; */
+        text-align: center;
+        padding-top: 15px;
+        /* padding-left: 12px;    */
+        box-shadow: rgba(100, 100, 111, 0.481) 0px 7px 29px 0px;
+        position: absolute;
+        background-color: white;
+        top: 4140px;
+        left: 1070px;
+        z-index: 6;
+    
+    
+    }
+    
+    .team10:hover {
+        top: 4130px;
+        transition: all 0.5s ease-in-out;
+    }
+    
+    .team11:hover {
+        top: 4130px;
+        transition: all 0.5s ease-in-out;
+    }
+    
+    .team1:hover {
+        top: 4130px;
+        transition: all 0.5s ease-in-out;
+    }
+    
+    .container {
+        background-image: url(img/contact_bg.png);
+        height: 110vh;
+        background-repeat: no-repeat;
+        width: 100%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .container>h1 {
+        font-size: 10vh;
+    }
+    
+    .con {
+        font-size: x-large;
+    }
+    
+    .con>button {
+        height: 10vh;
+        width: 14vw;
+        border: none;
+        border-radius: 50px;
+        color: #ED4519;
+        font-size: large;
+    }
+    
+    .con>button:hover {
+        background-color: #fd2402;
+        color: white;
+        transition: all 0.6s ease-in-out;
+    }
+    footer{
+        height: 100vh;
+        width: 100%;
+        /* border: 1px solid #ED4519; */
+        display: flex;
+        /* flex-wrap: nowrap; */
+    }
+    
+    .foot{
+        height: 70vh;
+        width: 25%;
+        /* border: 1px solid black; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    
+        
+    }
+    .footer{
+        height: 30vh;
+        width: 100%;
+        /* border: 1px solid rebeccapurple; */
+    }
+    
+    .foot2{
+        font-size: xx-large;
+        font-weight: 600;
+        color: #2E2E4E;
+    }
+    .foot1{
+        color: #7A7C7E;
+        line-height: 40px;
+    }
+    .foot10{
+        height: 70vh;
+        width: 25%;
+        /* border: 1px solid black; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    gap: 20px;
+        
+    }
+    .foot11{
+        height: 70vh;
+        width: 25%;
+        /* border: 1px solid black; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    gap: 20px;
+        
+    }
+    
+    .foot12{
+        height: 70vh;
+        color: #7A7C7E;
+    
+        width: 25%;
+        /* border: 1px solid black; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    gap: 20px;
+        
+    }
+    hr{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .footer{
+        color:#7A7C7E ;
+        text-align: center;
+        height: 10vh;
+        width: 100%;
+    }</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="img/logo.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <header>
+        <div id="header">
+            <p>+800 4640 418</p>
+            <p>Mon-sat 10.00-7:00</p>
+        </div>
+        <div class="header">
+            <i class="ii fa-brands fa-facebook-f " style="color: white;"></i>
+            <i class="ii fa-brands fa-pinterest-p " style="color: white;"></i>
+            <i class="ii fa-brands fa-google-plus-g" style="color: white;"></i>
+            <i class="ii fa-brands fa-linkedin-in" style="color: white;"></i>
+
+        </div>
+    </header>
+    <nav>
+        <div id="nav">
+            <img src="img/logo.png.webp" alt="">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Blog</li>
+                <li>Pages</li>
+                <li>Services</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </nav>
+    <section>
+        <div id="banner">
+            <img src="img/banner.png" alt="" class="img">
+            <img src="img/dog.png.webp" alt="" id="img">
+        </div>
+    </section>
+    <div class="text">
+        <p class="we animate__animated animate__bounce">We Care</p>
+        <p class="your animate__animated animate__bounce">Your Pets</p>
+        <p class=" lorem"class="we animate__animated animate__bounce">Lorem ipsum dolor sit amet, consectetur</p>
+        <p class="lorem"class="we animate__animated animate__bounce">adipiscing elit, sed do eiusmod.</p>
+        <button class="we animate__animated animate__bounce">Contact us</button>
+    </div>
+
+    <main>
+        <h1 class="we animate__animated animate__flash">Services for every dog</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+        <p>incididunt ut labore et dolore magna.</p>
+    </main>
+
+    <article>
+        <div class="div">
+            <div class="div1">
+                <img src="img/dog1.webp" alt="">
+                <p>Lorem ipsum dolor sit amet,
+                    <br>consectetur adipiscing elit, sed do
+                    <br>eiusmod tempor incididunt ut
+                </p>
+            </div>
+        </div>
+        <div class="div">
+            <div class="div1">
+                <img src="img/dog2.webp" alt="">
+                <p>Lorem ipsum dolor sit amet,
+                    <br>consectetur adipiscing elit, sed do
+                    <br>eiusmod tempor incididunt ut
+                </p>
+            </div>
+        </div>
+        <div class="div">
+            <div class="div1">
+                <img src="img/dog3.webp" alt="">
+                <p>Lorem ipsum dolor sit amet,
+                    <br>consectetur adipiscing elit, sed do
+                    <br>eiusmod tempor incididunt ut
+                </p>
+            </div>
+        </div>
+    </article>
+    <div id="teama">
+        <div class="work">
+            <img src="img/cat.webp" alt="">
+        </div>
+        <div class="scroll1">
+            <div>
+                <p class="work2" class="we animate__animated animate__flash" >We care your pet</p>
+                <p class="work3" class="we animate__animated animate__flash">As you care</p>
+            </div>
+            <div>
+                <p class="work5">Lorem ipsum dolor sit , consectetur adipiscing elit, sed do</p>
+                <p class="work5">iusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="work5">Quis ipsum suspendisse ultrices gravida. Risus commodo</p>
+                <p class="work5">viverra maecenas accumsan.</p>
+            </div>
+            <div class="work6"> <button>About us</button></div>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="cards">
+        <div class="cards1">
+            <div>
+                <p class="para" class="we animate__animated animate__flash">We need your</p>
+                <p class="para1">help Adopt Us</p>
+            </div>
+            <div>
+                <p class="para2">Lorem ipsum dolor sit , consectetur adipiscing elit, sed do</p>
+                <p class="para2">iusmod tempor incididunt ut labore et dolore magna</p>
+                <p class="para2">aliqua. Quis ipsum suspendisse ultrices.</p>
+            </div>
+            <div><button class="pa">Contact us</button></div>
+        </div>
+        <div class="cards2">
+            <div class="cards">
+                <img src="img/card1.webp" alt="">
+                <h1>452</h1>
+                <p>Pets Available</p>
+            </div>
+        </div>
+        <div class="cards3">
+            <div class="cards"><img src="img/card2.webp" alt="">
+                <h1>52+</h1>
+                <p>Pets Available</p>
+            </div>
+            <div class="cards"><img src="img/card3.webp" alt="">
+                <h1>52+</h1>
+                <p>Pets Available</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="john">
+        <div class="johnny">
+            <div class="john1"><img src="img/jhon.webp" alt=""></div>
+            <div class="john2">
+                <div>
+                    <p class="john3">John Walker</p>
+                    <p class="john4">Head of Web Design</p>
+                </div>
+                <div>
+                    <p class="john5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="john5"> Eaque commodi quas nisi consequuntur amet optio.</p>
+                    <p class="john5"> Placeat voluptatibus tenetur natus quia in iusto laborum harum vel?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="our">
+        <h1>Our Team</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+        <p>tempor incididunt ut labore et dolore magna.</p>
+    </div>
+
+    <div class="team">
+        <div class="teams"><img src="img/1.png.webp" alt="">
+            <div class="team1"><b>
+                    <p class="team2">Rala Emaia</p>
+                </b>
+                <p class="team3">Senior Director</p>
+            </div>
+        </div>
+        <div class="teams"><img src="img/2.webp" alt="">
+            <div class="team10"><b>
+                    <p class="team2">John Smith</p>
+                </b>
+                <p class="team3">Senior Director</p>
+            </div>
+        </div>
+        <div class="teams"><img src="img/3.png.webp" alt="">
+            <div class="team11"><b>
+                    <p class="team2">Rala Emaia</p>
+                </b>
+                <p class="team3">Senior Director</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Why go with Anipat?</h1>
+        <p class="con">Because we know that even the best technology is only as</p>
+        <p class="con">good as the people behind it. 24/7 tech support.</p>
+        <p class="con"><button>Contact us</button> &nbsp; &nbsp; &nbsp; &nbsp;or +880 4644 216</p>
+    </div>
+
+
+    <footer>
+        <div class="foot">
+            <div>
+                <p class="foot2">Contact us</p>
+            </div>
+            <div>
+                <p class="foot1">+550 0000 565</p>
+                <p class="foot1">Demomail@gmail.com</p>
+                <p class="foot1">700,Green Lane,New York,USA</p>
+            </div>
+        </div>
+        </div>
+        <div class="foot10">
+            <div>
+                <p class="foot2">Our Services</p>
+            </div>
+            <div>
+                <p class="foot1">Pet Insurance</p>
+                <p class="foot1">Pet Surgerios</p>
+                <p class="foot1">Pet Adoption</p>
+                <p class="foot1">Dog Insurance</p>
+                <p class="foot1">Dog Insurance</p>
+            </div>
+        </div>
+        </div>
+        <div class="foot11">
+            <div>
+                <p class="foot2">Quick Link</p>
+            </div>
+            <div>
+                <p class="foot1">About Us</p>
+                <p class="foot1">Privacy Policy</p>
+                <p class="foot1">Term Of Service</p>
+                <p class="foot1">Login Info</p>
+                <p class="foot1">Knowlege Base</p>
+            </div>
+        </div>
+        </div>
+        <div class="foot12">
+            <img src="img/logo.webp" alt="">
+            <div><p>239 E 5th St, New York NY 10003,</p>
+            <p>USA</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="ii fa-brands fa-facebook-f " style="color: #c6ccd7;"></i>&nbsp;&nbsp;&nbsp;
+            <i class="ii fa-brands fa-pinterest-p " style="color: #c6ccd7;"></i>&nbsp;&nbsp;&nbsp;
+            <i class="ii fa-brands fa-google-plus-g" style="color: #c6ccd7;"></i>&nbsp;&nbsp;&nbsp;
+            <i class="ii fa-brands fa-linkedin-in" style="color: #c6ccd7;"></i>
+    </div>
+        </div>
+
+    </footer>
+    <hr>
+    <div class="footer">
+<p>Copyright ©2024 All rights reserved | This template is made with &#9825; by Colorlib</p></div>
+</body>
+
+</html>
+</body>
+</html>
